@@ -201,6 +201,7 @@
     line-height: 1;
   }
   .seal {
+    position: relative;
     margin-top: 36px;
     width: 132px;
     height: 132px;
@@ -212,6 +213,66 @@
       radial-gradient(circle at 50% 42%, #fffaf2, #f0e0c4 72%, #e4cfA4);
     box-shadow: 0 10px 24px rgba(120, 78, 32, 0.16);
     pointer-events: none;
+    animation: sealGlow 2.6s ease-in-out infinite;
+  }
+  .seal::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid rgba(168, 132, 69, 0.5);
+    animation: sealRing 2.6s ease-out infinite;
+  }
+  @keyframes sealGlow {
+    0%, 100% { box-shadow: 0 10px 24px rgba(120, 78, 32, 0.16); }
+    50% { box-shadow: 0 16px 34px rgba(156, 61, 76, 0.22); }
+  }
+  @keyframes sealRing {
+    0% { transform: scale(0.94); opacity: 0.65; }
+    100% { transform: scale(1.22); opacity: 0; }
+  }
+  .petals {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .petals i {
+    position: absolute;
+    bottom: -16px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50% 0 50% 50%;
+    background: rgba(184, 122, 132, 0.55);
+    animation: floatUp linear infinite;
+  }
+  .petals i:nth-child(1) { left: 10%; animation-duration: 9s; animation-delay: 0s; }
+  .petals i:nth-child(2) { left: 28%; width: 6px; height: 6px; background: rgba(196, 164, 96, 0.7); animation-duration: 11s; animation-delay: 1.4s; }
+  .petals i:nth-child(3) { left: 48%; animation-duration: 8.5s; animation-delay: 2.6s; }
+  .petals i:nth-child(4) { left: 66%; width: 6px; height: 6px; background: rgba(196, 164, 96, 0.65); animation-duration: 10s; animation-delay: 0.8s; }
+  .petals i:nth-child(5) { left: 82%; animation-duration: 12s; animation-delay: 3.2s; }
+  .petals i:nth-child(6) { left: 18%; width: 5px; height: 5px; animation-duration: 13s; animation-delay: 4s; }
+  @keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    15% { opacity: 0.85; }
+    100% { transform: translateY(-108vh) rotate(200deg); opacity: 0; }
+  }
+  .kicker, .names .groom, .names .weds, .names .bride, .rule, .gate-date, .gate-place, .gate-hint {
+    animation: gateIn 0.9s ease both;
+  }
+  .kicker { animation-delay: 0.05s; }
+  .names .groom { animation-delay: 0.16s; }
+  .names .weds { animation-delay: 0.34s; }
+  .names .bride { animation-delay: 0.48s; }
+  .rule { animation-delay: 0.62s; }
+  .gate-date { animation-delay: 0.72s; }
+  .gate-place { animation-delay: 0.82s; }
+  .seal { animation: gateIn 0.9s ease 0.9s both, sealGlow 2.6s ease-in-out 1.4s infinite; }
+  .gate-hint { animation-delay: 1.05s; }
+  @keyframes gateIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
   }
   .seal span {
     display: block;
@@ -262,6 +323,12 @@
     height: 28px;
     margin: 8px auto 0;
     background: linear-gradient(var(--gold), transparent);
+    transform-origin: top center;
+    animation: drip 1.6s ease-in-out infinite;
+  }
+  @keyframes drip {
+    0%, 100% { transform: scaleY(0.45); opacity: 0.35; }
+    50% { transform: scaleY(1); opacity: 1; }
   }
 
   section.block {
@@ -303,14 +370,44 @@
     color: var(--muted);
   }
 
-  .reveal {
-    opacity: 0;
-    transform: translateY(18px);
-    animation: rise 0.8s ease forwards;
+  .hero { overflow: hidden; }
+  .shell.is-open .hero img {
+    animation: photoIn 1.15s ease both;
   }
-  @keyframes rise {
+  @keyframes photoIn {
+    from { opacity: 0; transform: scale(1.04); }
     to { opacity: 1; transform: none; }
   }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+  .timeline li {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .reveal.is-in .timeline li { opacity: 1; transform: none; }
+  .reveal.is-in .timeline li:nth-child(1) { transition-delay: 0.05s; }
+  .reveal.is-in .timeline li:nth-child(2) { transition-delay: 0.14s; }
+  .reveal.is-in .timeline li:nth-child(3) { transition-delay: 0.23s; }
+  .reveal.is-in .timeline li:nth-child(4) { transition-delay: 0.32s; }
+  .reveal.is-in .timeline li:nth-child(5) { transition-delay: 0.41s; }
+  .venue {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-in .venue { opacity: 1; transform: none; }
+  .reveal.is-in .venue:nth-of-type(1) { transition-delay: 0.06s; }
+  .reveal.is-in .venue:nth-of-type(2) { transition-delay: 0.16s; }
+  .reveal.is-in .venue:nth-of-type(3) { transition-delay: 0.26s; }
 
   .scratch-wrap {
     position: relative;
@@ -319,6 +416,16 @@
     aspect-ratio: 1;
     overflow: visible;
     filter: drop-shadow(0 12px 14px rgba(111, 72, 28, 0.16));
+    animation: heartBeat 2.8s ease-in-out infinite;
+    transform-origin: center 62%;
+  }
+  .scratch-wrap.is-touched,
+  .scratch-wrap.is-clear {
+    animation: none;
+  }
+  @keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.045); }
   }
   .heart-svg {
     position: absolute;
@@ -457,6 +564,13 @@
     font-variant-numeric: lining-nums tabular-nums;
     font-feature-settings: "lnum" 1, "tnum" 1;
   }
+  .unit b.tick {
+    animation: numIn 0.35s ease;
+  }
+  @keyframes numIn {
+    from { opacity: 0.25; transform: translateY(-5px); }
+    to { opacity: 1; transform: none; }
+  }
   .unit small {
     display: block;
     margin-top: 4px;
@@ -584,7 +698,15 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .door, .gate-face, .reveal { transition: none; animation: none; opacity: 1; transform: none; }
+    .door, .gate-face, .reveal, .seal, .seal::after, .petals i,
+    .scroll-hint i, .scratch-wrap, .unit b, .timeline li, .venue,
+    .kicker, .names span, .rule, .gate-date, .gate-place, .gate-hint,
+    .hero img {
+      transition: none !important;
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
 </style>
 </head>
@@ -595,6 +717,7 @@
         <div class="door door-left"></div>
         <div class="door door-right"></div>
       </div>
+      <div class="petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="gate-face">
         <p class="kicker">You are invited</p>
         <p class="names">
@@ -690,8 +813,8 @@
         </ol>
       </section>
 
-      <section class="reveal">
-        <figure class="poster">
+      <section>
+        <figure class="poster reveal">
           <img src="cards/sagai.jpg" alt="Sagai and Carnival, 21 November 2026, 11:00 AM, at Mandap Vatika, Kumbha Nagar, Nokha, opposite Mahaveer Apartment, Udaipur, Rajasthan 313001.">
           <figcaption>
             <h3>Sagai &amp; Carnival</h3>
@@ -699,7 +822,7 @@
             <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mandap+Vatika+Kumbha+Nagar+Nokha+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
           </figcaption>
         </figure>
-        <figure class="poster">
+        <figure class="poster reveal">
           <img src="cards/mayra.jpg" alt="Mayra, 21 November 2026, 2:30 PM, at Dé Glance Hotel, Wakal Mata Road, Gayariawas, Central Area, Udaipur, Rajasthan 313002.">
           <figcaption>
             <h3>Mayra</h3>
@@ -707,7 +830,7 @@
             <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+De+Glance+Wakal+Mata+Road+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
           </figcaption>
         </figure>
-        <figure class="poster">
+        <figure class="poster reveal">
           <img src="cards/baarat.jpg" alt="Nikasi and Baarat, 21 November 2026, 6:00 PM onwards, at Royal Residency, 4 Kumbha Nagar, Hiran Magri, Udaipur, Rajasthan 313002.">
           <figcaption>
             <h3>Nikasi &amp; Baarat</h3>
@@ -715,7 +838,7 @@
             <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Royal+Residency+4+Kumbha+Nagar+Hiran+Magri+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
           </figcaption>
         </figure>
-        <figure class="poster">
+        <figure class="poster reveal">
           <img src="cards/reception.jpg" alt="Reception, 21 November 2026, 6:00 PM onwards, at Mandap Vatika, Kumbha Nagar, Nokha, opposite Mahaveer Apartment, Udaipur.">
           <figcaption>
             <h3>Reception</h3>
@@ -723,7 +846,7 @@
             <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mandap+Vatika+Kumbha+Nagar+Nokha+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
           </figcaption>
         </figure>
-        <figure class="poster">
+        <figure class="poster reveal">
           <img src="cards/vivah.jpg" alt="Vivah Sanskar, 21 November 2026, 11:30 PM. Seven steps, a lifetime of love, faith and togetherness.">
           <figcaption>
             <h3>Vivah Sanskar</h3>
@@ -814,6 +937,21 @@
     }, 980);
   });
 
+  var motionOK = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealNodes = document.querySelectorAll(".reveal");
+  if (!motionOK || !("IntersectionObserver" in window)) {
+    revealNodes.forEach(function (el) { el.classList.add("is-in"); });
+  } else {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        revealObserver.unobserve(entry.target);
+      });
+    }, { root: shell, threshold: 0.22, rootMargin: "0px 0px -8% 0px" });
+    revealNodes.forEach(function (el) { revealObserver.observe(el); });
+  }
+
   var calUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE"
     + "&text=" + encodeURIComponent("Jayesh weds Rashi")
     + "&dates=20261121T053000Z/20261121T180000Z"
@@ -849,14 +987,22 @@
     var diff = when.getTime() - Date.now();
     if (diff < 0) diff = 0;
     var total = Math.floor(diff / 1000);
-    var days = Math.floor(total / 86400);
-    var hours = Math.floor((total % 86400) / 3600);
-    var mins = Math.floor((total % 3600) / 60);
-    var secs = total % 60;
-    document.getElementById("dd").textContent = String(days).padStart(2, "0");
-    document.getElementById("hh").textContent = String(hours).padStart(2, "0");
-    document.getElementById("mm").textContent = String(mins).padStart(2, "0");
-    document.getElementById("ss").textContent = String(secs).padStart(2, "0");
+    var days = String(Math.floor(total / 86400)).padStart(2, "0");
+    var hours = String(Math.floor((total % 86400) / 3600)).padStart(2, "0");
+    var mins = String(Math.floor((total % 3600) / 60)).padStart(2, "0");
+    var secs = String(total % 60).padStart(2, "0");
+    setUnit("dd", days);
+    setUnit("hh", hours);
+    setUnit("mm", mins);
+    setUnit("ss", secs);
+  }
+  function setUnit(id, value) {
+    var el = document.getElementById(id);
+    if (el.textContent === value) return;
+    el.textContent = value;
+    el.classList.remove("tick");
+    void el.offsetWidth;
+    el.classList.add("tick");
   }
   tick();
   window.setInterval(tick, 1000);
