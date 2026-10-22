@@ -314,67 +314,41 @@
 
   .scratch-wrap {
     position: relative;
-    width: min(300px, 84%);
-    margin: 16px auto 4px;
+    width: min(232px, 68%);
+    margin: 12px auto 2px;
     aspect-ratio: 1;
     overflow: visible;
-    filter: drop-shadow(0 16px 18px rgba(111, 72, 28, 0.18));
+    filter: drop-shadow(0 12px 14px rgba(111, 72, 28, 0.16));
   }
-  .scratch-prize {
+  .heart-svg {
     position: absolute;
     inset: 0;
-    clip-path: url(#heartClip);
-    background:
-      radial-gradient(ellipse at 50% 34%, #fffaf4 0%, #f8e3d2 48%, #efc2b3 100%);
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
   }
-  .scratch-prize::before {
-    content: "";
+  .scratch-date {
     position: absolute;
-    left: 50%;
-    top: 51%;
-    width: 7px;
-    height: 7px;
-    border: 1px solid #b08a4a;
-    background: #fff8ee;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  .scratch-prize strong {
-    position: absolute;
-    left: 50%;
-    top: 66%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    right: 0;
+    top: 58%;
+    z-index: 0;
     margin: 0;
+    text-align: center;
+    pointer-events: none;
+  }
+  .scratch-date strong {
     color: var(--rose-deep);
     font-family: "Cormorant Garamond", Palatino, Georgia, serif;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 600;
     font-style: normal;
     font-variant-numeric: lining-nums;
     font-feature-settings: "lnum" 1;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     line-height: 1;
     white-space: nowrap;
-    text-align: center;
-  }
-  .scratch-glow {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    clip-path: url(#heartClip);
-    background: linear-gradient(115deg, transparent 30%, rgba(255, 252, 244, 0.72) 48%, transparent 66%);
-    background-size: 240% 100%;
-    animation: foilShine 2.6s ease-in-out infinite;
-    mix-blend-mode: soft-light;
-  }
-  .scratch-wrap.is-touched .scratch-glow,
-  .scratch-wrap.is-clear .scratch-glow {
-    opacity: 0;
-    animation: none;
-  }
-  @keyframes foilShine {
-    0% { background-position: 140% 0; }
-    100% { background-position: -140% 0; }
   }
   .spark {
     position: absolute;
@@ -653,18 +627,19 @@
         <p class="eyebrow">A small surprise</p>
         <h2>Scratch to reveal</h2>
         <div class="scratch-wrap" id="scratchWrap">
-          <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+          <svg class="heart-svg" viewBox="0 0 100 100" aria-hidden="true">
             <defs>
-              <clipPath id="heartClip" clipPathUnits="objectBoundingBox">
-                <path d="M0.5 0.482 C0.5 0.329 0.16 0.363 0.16 0.489 C0.16 0.625 0.449 0.703 0.5 0.805 C0.551 0.703 0.84 0.625 0.84 0.489 C0.84 0.363 0.5 0.329 0.5 0.482 Z"/>
-              </clipPath>
+              <radialGradient id="heartFill" cx="50%" cy="38%" r="58%">
+                <stop offset="0%" stop-color="#fffaf4"/>
+                <stop offset="52%" stop-color="#f8e3d2"/>
+                <stop offset="100%" stop-color="#efc2b3"/>
+              </radialGradient>
             </defs>
+            <path fill="url(#heartFill)" d="M50 46 C50 32 24 35 24 48 C24 61 46 70 50 80 C54 70 76 61 76 48 C76 35 50 32 50 46 Z"/>
+            <rect x="47.4" y="49.2" width="5.2" height="5.2" fill="#fff8ee" stroke="#b08a4a" stroke-width="0.55" transform="rotate(45 50 51.8)"/>
           </svg>
-          <div class="scratch-prize">
-            <strong>21 Nov</strong>
-          </div>
+          <p class="scratch-date"><strong>21 Nov</strong></p>
           <canvas id="scratch" aria-label="Scratch the heart to reveal the date"></canvas>
-          <div class="scratch-glow" aria-hidden="true"></div>
           <span class="spark s1" aria-hidden="true"></span>
           <span class="spark s2" aria-hidden="true"></span>
           <span class="spark s3" aria-hidden="true"></span>
@@ -907,11 +882,11 @@
 
   function heartPath(w, h) {
     ctx.beginPath();
-    ctx.moveTo(0.5 * w, 0.482 * h);
-    ctx.bezierCurveTo(0.5 * w, 0.329 * h, 0.16 * w, 0.363 * h, 0.16 * w, 0.489 * h);
-    ctx.bezierCurveTo(0.16 * w, 0.625 * h, 0.449 * w, 0.703 * h, 0.5 * w, 0.805 * h);
-    ctx.bezierCurveTo(0.551 * w, 0.703 * h, 0.84 * w, 0.625 * h, 0.84 * w, 0.489 * h);
-    ctx.bezierCurveTo(0.84 * w, 0.363 * h, 0.5 * w, 0.329 * h, 0.5 * w, 0.482 * h);
+    ctx.moveTo(0.5 * w, 0.46 * h);
+    ctx.bezierCurveTo(0.5 * w, 0.32 * h, 0.24 * w, 0.35 * h, 0.24 * w, 0.48 * h);
+    ctx.bezierCurveTo(0.24 * w, 0.61 * h, 0.46 * w, 0.7 * h, 0.5 * w, 0.8 * h);
+    ctx.bezierCurveTo(0.54 * w, 0.7 * h, 0.76 * w, 0.61 * h, 0.76 * w, 0.48 * h);
+    ctx.bezierCurveTo(0.76 * w, 0.35 * h, 0.5 * w, 0.32 * h, 0.5 * w, 0.46 * h);
     ctx.closePath();
   }
 
@@ -965,7 +940,7 @@
     ctx.font = "600 " + Math.round(w * 0.05) + "px Outfit, sans-serif";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("SCRATCH", w / 2, h * 0.62);
+    ctx.fillText("SCRATCH", w / 2, h * 0.6);
     ctx.restore();
     ctx.save();
     heartPath(w, h);
