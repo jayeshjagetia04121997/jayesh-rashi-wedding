@@ -769,8 +769,7 @@
         </div>
         <p class="scratch-sub">Saturday · 2026<br>Udaipur</p>
         <div class="btn-row">
-          <button class="btn" id="saveDate" type="button">Save the date</button>
-          <a class="btn ghost" id="googleCal" href="#" target="_blank" rel="noopener">Add to calendar</a>
+          <a class="btn" id="googleCal" href="#" target="_blank" rel="noopener">Add to calendar</a>
         </div>
       </section>
 
@@ -958,30 +957,6 @@
     + "&location=" + encodeURIComponent("Udaipur, Rajasthan")
     + "&details=" + encodeURIComponent(scheduleText);
   document.getElementById("googleCal").href = calUrl;
-
-  document.getElementById("saveDate").addEventListener("click", function () {
-    var ics = [
-      "BEGIN:VCALENDAR",
-      "VERSION:2.0",
-      "PRODID:-//Jayesh Rashi//Wedding//EN",
-      "BEGIN:VEVENT",
-      "UID:jayesh-rashi-2026-11-21@wedding",
-      "DTSTAMP:20261022T073000Z",
-      "DTSTART:20261121T053000Z",
-      "DTEND:20261121T180000Z",
-      "SUMMARY:Jayesh weds Rashi",
-      "LOCATION:Udaipur, Rajasthan",
-      "DESCRIPTION:" + scheduleText.replace(/\n/g, "\\n"),
-      "END:VEVENT",
-      "END:VCALENDAR"
-    ].join("\r\n");
-    var blob = new Blob([ics], { type: "text/calendar" });
-    var a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "Jayesh-Rashi-21-November-2026.ics";
-    a.click();
-    URL.revokeObjectURL(a.href);
-  });
 
   function tick() {
     var diff = when.getTime() - Date.now();
