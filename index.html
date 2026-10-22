@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f0e6">
+<title>Jayesh weds Rashi · 21 November 2026</title>
+<meta name="description" content="Wedding invitation of Jayesh and Rashi. Saturday, 21 November 2026, Udaipur. Tap to open the card.">
+<meta property="og:title" content="Jayesh weds Rashi">
+<meta property="og:description" content="Saturday, 21 November 2026, Udaipur. Tap to open the wedding card.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bookmark-mrs-waiver-pat.trycloudflare.com/">
+<meta property="og:image" content="https://bookmark-mrs-waiver-pat.trycloudflare.com/cards/cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #f7f1e7;
+    --paper: #fbf7f1;
+    --ink: #3c4634;
+    --muted: #6d675c;
+    --rose: #9c3d4c;
+    --rose-deep: #6f2432;
+    --gold: #a88445;
+    --gold-soft: #e6d3ae;
+    --sage: #5f6d52;
+    --line: rgba(168, 132, 69, 0.45);
+    --shadow: 0 24px 60px rgba(20, 16, 10, 0.28);
+    --serif: "Cormorant Garamond", Palatino, Georgia, serif;
+    --script: "Great Vibes", cursive;
+    --sans: Outfit, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(1200px 700px at 50% -10%, #314033 0%, transparent 55%),
+      #172018;
+    color: var(--ink);
+    font-family: var(--serif);
+  }
+
+  .shell {
+    position: relative;
+    width: min(440px, 100%);
+    height: 100dvh;
+    max-height: 960px;
+    overflow: auto;
+    background: var(--paper);
+    box-shadow: var(--shadow);
+    scrollbar-width: none;
+  }
+  .shell::-webkit-scrollbar { display: none; }
+  .shell.is-sealed { overflow: hidden; }
+
+  @media (min-width: 760px) {
+    .shell {
+      height: min(960px, calc(100dvh - 32px));
+      border-radius: 32px;
+      border: 1px solid rgba(255, 244, 220, 0.18);
+    }
+  }
+
+  button, textarea { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  a { color: inherit; }
+
+  .gate {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+  }
+  .doors {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    perspective: 1200px;
+  }
+  .door {
+    position: relative;
+    background:
+      radial-gradient(circle at 20% 12%, rgba(232, 176, 184, 0.45), transparent 18%),
+      radial-gradient(circle at 80% 88%, rgba(196, 168, 96, 0.28), transparent 22%),
+      radial-gradient(circle at 70% 20%, rgba(120, 146, 96, 0.18), transparent 16%),
+      linear-gradient(180deg, #f8f3ea, #efe4d2);
+    transition: transform 1.05s cubic-bezier(.2, .7, .2, 1);
+    box-shadow: inset 0 0 0 1px rgba(168, 132, 69, 0.18);
+  }
+  .door::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(168, 132, 69, 0.45);
+    border-radius: 18px;
+    pointer-events: none;
+  }
+  .door-left { transform-origin: left center; }
+  .door-right { transform-origin: right center; }
+  .shell.is-opening .door-left { transform: rotateY(76deg); }
+  .shell.is-opening .door-right { transform: rotateY(-76deg); }
+
+  .gate-face {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 32px 40px;
+    text-align: center;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+  }
+  .shell.is-opening .gate-face {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  .kicker {
+    font-family: var(--sans);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--sage);
+    margin: 0 0 18px;
+  }
+  .names {
+    margin: 0;
+    line-height: 1;
+  }
+  .names span {
+    display: block;
+    font-family: var(--script);
+    font-weight: 400;
+  }
+  .names .groom,
+  .names .bride {
+    font-size: 64px;
+    color: var(--rose-deep);
+    line-height: 1.05;
+  }
+  .names .groom { margin-bottom: 4px; }
+  .names .bride { margin-top: 18px; }
+  .names .weds {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--gold);
+    margin: 10px 0 0;
+    line-height: 1;
+  }
+  .rule {
+    width: 72px;
+    height: 1px;
+    background: var(--gold);
+    margin: 18px auto;
+    position: relative;
+  }
+  .rule::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border: 1px solid var(--gold);
+    background: var(--ivory);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .gate-date {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .gate-place {
+    margin: 8px 0 0;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1;
+  }
+  .seal {
+    margin-top: 36px;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    border: 1px dashed var(--gold);
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(circle at 50% 42%, #fffaf2, #f0e0c4 72%, #e4cfA4);
+    box-shadow: 0 10px 24px rgba(120, 78, 32, 0.16);
+    pointer-events: none;
+  }
+  .seal span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--rose-deep);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .gate-hint {
+    margin-top: 22px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .story { position: relative; }
+  .hero {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f3eadc;
+  }
+  .hero img, .poster img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  .scroll-hint {
+    margin: 0;
+    padding: 16px 20px 22px;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sage);
+    background: #f3eadc;
+  }
+  .scroll-hint i {
+    display: block;
+    width: 1px;
+    height: 28px;
+    margin: 8px auto 0;
+    background: linear-gradient(var(--gold), transparent);
+  }
+
+  section.block {
+    padding: 42px 26px 18px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0;
+    line-height: 1.2;
+  }
+  h2 {
+    font-family: var(--script);
+    font-size: 42px;
+    font-weight: 400;
+    margin: 2px 0 12px;
+    padding-top: 10px;
+    color: var(--rose-deep);
+    line-height: 1.35;
+  }
+  .lede {
+    margin: 4px auto 0;
+    max-width: 28ch;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .quote {
+    margin: 14px auto 0;
+    max-width: 28ch;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: rise 0.8s ease forwards;
+  }
+  @keyframes rise {
+    to { opacity: 1; transform: none; }
+  }
+
+  .scratch-wrap {
+    position: relative;
+    width: min(280px, 78%);
+    margin: 22px auto 8px;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+  .scratch-prize {
+    position: absolute;
+    inset: 0;
+    clip-path: url(#heartClip);
+  }
+  .scratch-prize strong {
+    position: absolute;
+    left: 50%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: var(--rose-deep);
+    font-family: "Cormorant Garamond", Palatino, Georgia, serif;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: normal;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .scratch-sub {
+    margin: 2px 0 0;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--sage);
+    line-height: 1.55;
+  }
+  #scratch {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    border-radius: 12px;
+  }
+  .scratch-wrap.is-clear #scratch {
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    border: 0;
+    background: var(--sage);
+    color: #f7f3ea;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .btn.gold { background: var(--rose-deep); }
+  .btn.ghost {
+    background: transparent;
+    color: var(--rose-deep);
+    border: 1px solid var(--line);
+  }
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .clock {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 22px auto 0;
+    max-width: 360px;
+  }
+  .unit {
+    background: #fff;
+    border: 1px solid var(--gold-soft);
+    border-radius: 14px;
+    padding: 12px 4px 10px;
+    text-align: center;
+  }
+  .unit b {
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--rose-deep);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "lnum" 1, "tnum" 1;
+  }
+  .unit small {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 22px auto 0;
+    padding: 0;
+    max-width: 360px;
+    text-align: left;
+  }
+  .timeline li {
+    position: relative;
+    padding: 0 0 18px 22px;
+    border-left: 1px solid var(--gold-soft);
+  }
+  .timeline li:last-child { border-left-color: transparent; }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--rose);
+    box-shadow: 0 0 0 4px #f6ebe3;
+  }
+  .timeline h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .timeline p {
+    margin: 2px 0 0;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .poster {
+    margin: 8px 18px 22px;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(168, 132, 69, 0.2);
+    box-shadow: 0 10px 28px rgba(80, 50, 20, 0.06);
+  }
+  .poster figcaption {
+    padding: 14px 16px 16px;
+    text-align: center;
+  }
+  .poster h3 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .poster p {
+    margin: 4px 0 12px;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .venues { padding-bottom: 10px; }
+  .venue {
+    margin: 12px auto;
+    max-width: 360px;
+    padding: 16px 16px 14px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid var(--gold-soft);
+    text-align: left;
+  }
+  .venue h3 { margin: 0 0 6px; font-size: 24px; font-weight: 600; line-height: 1.2; text-align: left; }
+  .venue p {
+    margin: 0 0 12px;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .wish textarea {
+    width: min(360px, 100%);
+    min-height: 96px;
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--gold-soft);
+    background: #fff;
+    resize: vertical;
+    font-family: var(--sans);
+    font-size: 14px;
+  }
+  .closing {
+    padding-bottom: 48px;
+  }
+  .closing .sign {
+    font-family: var(--script);
+    font-size: 40px;
+    line-height: 1.4;
+    color: var(--rose-deep);
+    margin: 16px 0 0;
+  }
+  .fine {
+    margin: 18px 0 0;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .door, .gate-face, .reveal { transition: none; animation: none; opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="shell is-sealed" id="shell">
+    <button class="gate" id="gate" type="button" aria-label="Tap to open the wedding card">
+      <div class="doors" aria-hidden="true">
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
+      </div>
+      <div class="gate-face">
+        <p class="kicker">You are invited</p>
+        <p class="names">
+          <span class="groom">Jayesh</span>
+          <span class="weds">weds</span>
+          <span class="bride">Rashi</span>
+        </p>
+        <div class="rule"></div>
+        <p class="gate-date">21 November 2026</p>
+        <p class="gate-place">Udaipur</p>
+        <div class="seal"><span>Tap to<br>open</span></div>
+        <p class="gate-hint">A card for you</p>
+      </div>
+    </button>
+
+    <article class="story" id="story">
+      <header class="hero">
+        <img src="cards/cover.jpg" alt="Jayesh weds Rashi, 21 November 2026. Two hearts, one journey, a lifetime of love.">
+        <p class="scroll-hint">Scroll the card<i></i></p>
+      </header>
+
+      <section class="block reveal">
+        <p class="eyebrow">Together with their families</p>
+        <h2>We're getting married</h2>
+        <p class="lede">We are honoured to welcome you to the wedding celebrations of Jayesh and Rashi, as they begin their journey with your blessings.</p>
+        <p class="quote">“From this day forward, together always.”</p>
+      </section>
+
+      <section class="block reveal" id="scratch-section">
+        <p class="eyebrow">A small surprise</p>
+        <h2>Scratch to reveal</h2>
+        <div class="scratch-wrap" id="scratchWrap">
+          <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+            <defs>
+              <clipPath id="heartClip" clipPathUnits="objectBoundingBox">
+                <path d="M0.5 0.482 C0.5 0.329 0.16 0.363 0.16 0.489 C0.16 0.625 0.449 0.703 0.5 0.805 C0.551 0.703 0.84 0.625 0.84 0.489 C0.84 0.363 0.5 0.329 0.5 0.482 Z"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="scratch-prize">
+            <strong>21 Nov</strong>
+          </div>
+          <canvas id="scratch" aria-label="Scratch the heart to reveal the date"></canvas>
+        </div>
+        <p class="scratch-sub">Saturday · 2026<br>Udaipur</p>
+        <div class="btn-row">
+          <button class="btn" id="saveDate" type="button">Save the date</button>
+          <a class="btn ghost" id="googleCal" href="#" target="_blank" rel="noopener">Add to calendar</a>
+        </div>
+      </section>
+
+      <section class="block reveal">
+        <p class="eyebrow">Until we celebrate</p>
+        <h2>Counting down</h2>
+        <div class="clock" aria-live="polite">
+          <div class="unit"><b id="dd">00</b><small>Days</small></div>
+          <div class="unit"><b id="hh">00</b><small>Hours</small></div>
+          <div class="unit"><b id="mm">00</b><small>Minutes</small></div>
+          <div class="unit"><b id="ss">00</b><small>Seconds</small></div>
+        </div>
+        <p class="quote">First celebration begins at 11:00&nbsp;AM.</p>
+      </section>
+
+      <section class="block reveal">
+        <p class="eyebrow">Saturday, 21 November 2026</p>
+        <h2>The day</h2>
+        <ol class="timeline">
+          <li>
+            <h3>Sagai &amp; Carnival</h3>
+            <p>11:00 AM · Mandap Vatika<br>Kumbha Nagar, Nokha, opposite Mahaveer Apartment, Udaipur 313001</p>
+          </li>
+          <li>
+            <h3>Mayra</h3>
+            <p>2:30 PM · Dé Glance Hotel<br>Wakal Mata Road, Gayariawas, Central Area, Udaipur 313002</p>
+          </li>
+          <li>
+            <h3>Nikasi &amp; Baarat</h3>
+            <p>6:00 PM onwards · Royal Residency<br>4, Kumbha Nagar, Hiran Magri, Sector 4, Udaipur 313002</p>
+          </li>
+          <li>
+            <h3>Reception</h3>
+            <p>6:00 PM onwards · Mandap Vatika<br>Kumbha Nagar, Nokha, Udaipur 313001</p>
+          </li>
+          <li>
+            <h3>Vivah Sanskar</h3>
+            <p>11:30 PM</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="reveal">
+        <figure class="poster">
+          <img src="cards/sagai.jpg" alt="Sagai and Carnival, 21 November 2026, 11:00 AM, at Mandap Vatika, Kumbha Nagar, Nokha, opposite Mahaveer Apartment, Udaipur, Rajasthan 313001.">
+          <figcaption>
+            <h3>Sagai &amp; Carnival</h3>
+            <p>21 November 2026 · 11:00 AM<br>Mandap Vatika, Kumbha Nagar, Nokha, Udaipur</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mandap+Vatika+Kumbha+Nagar+Nokha+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
+          </figcaption>
+        </figure>
+        <figure class="poster">
+          <img src="cards/mayra.jpg" alt="Mayra, 21 November 2026, 2:30 PM, at Dé Glance Hotel, Wakal Mata Road, Gayariawas, Central Area, Udaipur, Rajasthan 313002.">
+          <figcaption>
+            <h3>Mayra</h3>
+            <p>21 November 2026 · 2:30 PM<br>Dé Glance Hotel, Wakal Mata Road, Udaipur</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+De+Glance+Wakal+Mata+Road+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
+          </figcaption>
+        </figure>
+        <figure class="poster">
+          <img src="cards/baarat.jpg" alt="Nikasi and Baarat, 21 November 2026, 6:00 PM onwards, at Royal Residency, 4 Kumbha Nagar, Hiran Magri, Udaipur, Rajasthan 313002.">
+          <figcaption>
+            <h3>Nikasi &amp; Baarat</h3>
+            <p>21 November 2026 · 6:00 PM onwards<br>Royal Residency, 4 Kumbha Nagar, Hiran Magri, Udaipur</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Royal+Residency+4+Kumbha+Nagar+Hiran+Magri+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
+          </figcaption>
+        </figure>
+        <figure class="poster">
+          <img src="cards/reception.jpg" alt="Reception, 21 November 2026, 6:00 PM onwards, at Mandap Vatika, Kumbha Nagar, Nokha, opposite Mahaveer Apartment, Udaipur.">
+          <figcaption>
+            <h3>Reception</h3>
+            <p>21 November 2026 · 6:00 PM onwards<br>Mandap Vatika, Kumbha Nagar, Nokha, Udaipur</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mandap+Vatika+Kumbha+Nagar+Nokha+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
+          </figcaption>
+        </figure>
+        <figure class="poster">
+          <img src="cards/vivah.jpg" alt="Vivah Sanskar, 21 November 2026, 11:30 PM. Seven steps, a lifetime of love, faith and togetherness.">
+          <figcaption>
+            <h3>Vivah Sanskar</h3>
+            <p>21 November 2026 · 11:30 PM<br>Seven steps, a lifetime of love, faith and togetherness.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="block venues reveal">
+        <p class="eyebrow">Where to come</p>
+        <h2>Venues</h2>
+        <article class="venue">
+          <h3>Mandap Vatika</h3>
+          <p>Sagai &amp; Carnival, 11:00 AM<br>Reception, 6:00 PM onwards<br>Kumbha Nagar, Nokha, opposite Mahaveer Apartment, Udaipur, Rajasthan 313001</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mandap+Vatika+Kumbha+Nagar+Nokha+Udaipur" target="_blank" rel="noopener">View on Google Maps</a>
+        </article>
+        <article class="venue">
+          <h3>Dé Glance Hotel</h3>
+          <p>Mayra, 2:30 PM<br>Wakal Mata Road, Gayariawas, Central Area, Udaipur, Rajasthan 313002</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+De+Glance+Wakal+Mata+Road+Udaipur" target="_blank" rel="noopener">View on Google Maps</a>
+        </article>
+        <article class="venue">
+          <h3>Royal Residency</h3>
+          <p>Nikasi &amp; Baarat, 6:00 PM onwards<br>4, Kumbha Nagar, Hiran Magri, Sector 4, Udaipur, Rajasthan 313002</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Royal+Residency+4+Kumbha+Nagar+Hiran+Magri+Udaipur" target="_blank" rel="noopener">View on Google Maps</a>
+        </article>
+      </section>
+
+      <section class="block wish closing reveal">
+        <p class="eyebrow">With love</p>
+        <h2>We can't wait to celebrate with you</h2>
+        <p class="sign">Jayesh &amp; Rashi</p>
+        <textarea id="wish" placeholder="Write your wishes for Jayesh and Rashi"></textarea>
+        <div class="btn-row">
+          <button class="btn gold" id="sendWish" type="button">Send wishes on WhatsApp</button>
+        </div>
+        <p class="fine">Saturday · 21 November 2026 · Udaipur</p>
+      </section>
+    </article>
+  </div>
+  <noscript>Tap-to-open needs JavaScript. Jayesh weds Rashi, Saturday 21 November 2026, Udaipur.</noscript>
+
+<script>
+(function () {
+  var shell = document.getElementById("shell");
+  var gate = document.getElementById("gate");
+  var story = document.getElementById("story");
+
+  var when = new Date("2026-11-21T11:00:00+05:30");
+  var scheduleText = [
+    "Jayesh weds Rashi",
+    "Saturday, 21 November 2026 · Udaipur",
+    "",
+    "Sagai & Carnival",
+    "11:00 AM · Mandap Vatika",
+    "Kumbha Nagar, Nokha, opposite Mahaveer Apartment, Udaipur 313001",
+    "",
+    "Mayra",
+    "2:30 PM · Dé Glance Hotel",
+    "Wakal Mata Road, Gayariawas, Udaipur 313002",
+    "",
+    "Nikasi & Baarat",
+    "6:00 PM onwards · Royal Residency",
+    "4, Kumbha Nagar, Hiran Magri, Sector 4, Udaipur 313002",
+    "",
+    "Reception",
+    "6:00 PM onwards · Mandap Vatika, Udaipur",
+    "",
+    "Vivah Sanskar",
+    "11:30 PM",
+    "",
+    "We would be honoured by your presence."
+  ].join("\n");
+
+  function openWhatsApp(text) {
+    var url = "https://wa.me/?text=" + encodeURIComponent(text);
+    window.open(url, "_blank", "noopener");
+  }
+
+  gate.addEventListener("click", function () {
+    if (shell.classList.contains("is-opening") || shell.classList.contains("is-open")) return;
+    shell.classList.add("is-opening");
+    window.setTimeout(function () {
+      shell.classList.add("is-open");
+      shell.classList.remove("is-sealed");
+      gate.hidden = true;
+      story.focus({ preventScroll: true });
+    }, 980);
+  });
+
+  var calUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + "&text=" + encodeURIComponent("Jayesh weds Rashi")
+    + "&dates=20261121T053000Z/20261121T180000Z"
+    + "&location=" + encodeURIComponent("Udaipur, Rajasthan")
+    + "&details=" + encodeURIComponent(scheduleText);
+  document.getElementById("googleCal").href = calUrl;
+
+  document.getElementById("saveDate").addEventListener("click", function () {
+    var ics = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//Jayesh Rashi//Wedding//EN",
+      "BEGIN:VEVENT",
+      "UID:jayesh-rashi-2026-11-21@wedding",
+      "DTSTAMP:20261022T073000Z",
+      "DTSTART:20261121T053000Z",
+      "DTEND:20261121T180000Z",
+      "SUMMARY:Jayesh weds Rashi",
+      "LOCATION:Udaipur, Rajasthan",
+      "DESCRIPTION:" + scheduleText.replace(/\n/g, "\\n"),
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ].join("\r\n");
+    var blob = new Blob([ics], { type: "text/calendar" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "Jayesh-Rashi-21-November-2026.ics";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+
+  function tick() {
+    var diff = when.getTime() - Date.now();
+    if (diff < 0) diff = 0;
+    var total = Math.floor(diff / 1000);
+    var days = Math.floor(total / 86400);
+    var hours = Math.floor((total % 86400) / 3600);
+    var mins = Math.floor((total % 3600) / 60);
+    var secs = total % 60;
+    document.getElementById("dd").textContent = String(days).padStart(2, "0");
+    document.getElementById("hh").textContent = String(hours).padStart(2, "0");
+    document.getElementById("mm").textContent = String(mins).padStart(2, "0");
+    document.getElementById("ss").textContent = String(secs).padStart(2, "0");
+  }
+  tick();
+  window.setInterval(tick, 1000);
+
+  document.getElementById("sendWish").addEventListener("click", function () {
+    var note = document.getElementById("wish").value.trim();
+    if (!note) note = "Heartiest wishes to Jayesh and Rashi. So happy to celebrate with you on 21 November 2026.";
+    openWhatsApp(note + "\n\n— sent from the wedding card");
+  });
+
+  var canvas = document.getElementById("scratch");
+  var wrap = document.getElementById("scratchWrap");
+  var ctx = canvas.getContext("2d", { willReadFrequently: true });
+  var scratching = false;
+  var revealed = false;
+
+  function heartPath(w, h) {
+    var x = w / 2;
+    var y = h * 0.38;
+    var s = w * 0.34;
+    ctx.beginPath();
+    ctx.moveTo(x, y + s * 0.3);
+    ctx.bezierCurveTo(x, y - s * 0.15, x - s, y - s * 0.05, x - s, y + s * 0.32);
+    ctx.bezierCurveTo(x - s, y + s * 0.72, x - s * 0.15, y + s * 0.95, x, y + s * 1.25);
+    ctx.bezierCurveTo(x + s * 0.15, y + s * 0.95, x + s, y + s * 0.72, x + s, y + s * 0.32);
+    ctx.bezierCurveTo(x + s, y - s * 0.05, x, y - s * 0.15, x, y + s * 0.3);
+    ctx.closePath();
+  }
+
+  function paintCover() {
+    var w = canvas.width;
+    var h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+    ctx.save();
+    heartPath(w, h);
+    ctx.clip();
+    var grad = ctx.createLinearGradient(0, 0, w, h);
+    grad.addColorStop(0, "#7f8b68");
+    grad.addColorStop(1, "#c6a15a");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, w, h);
+    for (var i = 0; i < 180; i++) {
+      ctx.fillStyle = i % 3 === 0 ? "rgba(255,248,220,0.85)" : "rgba(255,255,255,0.35)";
+      ctx.beginPath();
+      ctx.arc(Math.random() * w, Math.random() * h, Math.random() * 1.6 + 0.3, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.fillStyle = "rgba(255,250,240,0.95)";
+    ctx.font = "600 14px Outfit, sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText("SCRATCH", w / 2, h * 0.64);
+    ctx.restore();
+  }
+
+  function sizeCanvas() {
+    var rect = wrap.getBoundingClientRect();
+    var ratio = window.devicePixelRatio || 1;
+    canvas.width = Math.max(1, Math.floor(rect.width * ratio));
+    canvas.height = Math.max(1, Math.floor(rect.height * ratio));
+    paintCover();
+    revealed = false;
+    wrap.classList.remove("is-clear");
+  }
+
+  function scratchAt(clientX, clientY) {
+    var rect = canvas.getBoundingClientRect();
+    var x = (clientX - rect.left) * (canvas.width / rect.width);
+    var y = (clientY - rect.top) * (canvas.height / rect.height);
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.beginPath();
+    ctx.arc(x, y, canvas.width * 0.055, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalCompositeOperation = "source-over";
+  }
+
+  function clearedEnough() {
+    var data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    var transparent = 0;
+    var seen = 0;
+    for (var i = 3; i < data.length; i += 32) {
+      seen++;
+      if (data[i] < 20) transparent++;
+    }
+    return transparent / seen > 0.42;
+  }
+
+  function pointerDown(event) {
+    scratching = true;
+    scratchAt(event.clientX, event.clientY);
+  }
+  function pointerMove(event) {
+    if (!scratching || revealed) return;
+    scratchAt(event.clientX, event.clientY);
+    if (clearedEnough()) {
+      revealed = true;
+      wrap.classList.add("is-clear");
+    }
+  }
+  canvas.addEventListener("pointerdown", pointerDown);
+  window.addEventListener("pointerup", function () { scratching = false; });
+  canvas.addEventListener("pointermove", pointerMove);
+  canvas.addEventListener("pointerleave", function () { scratching = false; });
+
+  sizeCanvas();
+  window.addEventListener("resize", sizeCanvas);
+})();
+</script>
+</body>
+</html>
