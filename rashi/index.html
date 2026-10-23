@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f0e6">
+<title>Rashi weds Jayesh · 21 November 2026</title>
+<meta name="description" content="Wedding invitation of Rashi and Jayesh. Saturday, 21 November 2026, Udaipur. Tap to open the card.">
+<meta property="og:title" content="Rashi weds Jayesh">
+<meta property="og:description" content="Saturday, 21 November 2026, Udaipur. Tap to open the wedding card.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jayeshjagetia04121997.github.io/jayesh-rashi-wedding/rashi/">
+<meta property="og:image" content="https://jayeshjagetia04121997.github.io/jayesh-rashi-wedding/rashi/cards/cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #f7f1e7;
+    --paper: #fbf7f1;
+    --ink: #3c4634;
+    --muted: #6d675c;
+    --rose: #9c3d4c;
+    --rose-deep: #6f2432;
+    --gold: #a88445;
+    --gold-soft: #e6d3ae;
+    --sage: #5f6d52;
+    --line: rgba(168, 132, 69, 0.45);
+    --shadow: 0 24px 60px rgba(20, 16, 10, 0.28);
+    --serif: "Cormorant Garamond", Palatino, Georgia, serif;
+    --script: "Great Vibes", cursive;
+    --sans: Outfit, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(1200px 700px at 50% -10%, #314033 0%, transparent 55%),
+      #172018;
+    color: var(--ink);
+    font-family: var(--serif);
+  }
+
+  .shell {
+    position: relative;
+    width: min(440px, 100%);
+    height: 100dvh;
+    max-height: 960px;
+    overflow: auto;
+    background: var(--paper);
+    box-shadow: var(--shadow);
+    scrollbar-width: none;
+  }
+  .shell::-webkit-scrollbar { display: none; }
+  .shell.is-sealed { overflow: hidden; }
+
+  @media (min-width: 760px) {
+    .shell {
+      height: min(960px, calc(100dvh - 32px));
+      border-radius: 32px;
+      border: 1px solid rgba(255, 244, 220, 0.18);
+    }
+  }
+
+  button, textarea { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  a { color: inherit; }
+
+  .gate {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+  }
+  .doors {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    perspective: 1200px;
+  }
+  .door {
+    position: relative;
+    background:
+      radial-gradient(circle at 20% 12%, rgba(232, 176, 184, 0.45), transparent 18%),
+      radial-gradient(circle at 80% 88%, rgba(196, 168, 96, 0.28), transparent 22%),
+      radial-gradient(circle at 70% 20%, rgba(120, 146, 96, 0.18), transparent 16%),
+      linear-gradient(180deg, #f8f3ea, #efe4d2);
+    transition: transform 1.05s cubic-bezier(.2, .7, .2, 1);
+    box-shadow: inset 0 0 0 1px rgba(168, 132, 69, 0.18);
+  }
+  .door::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(168, 132, 69, 0.45);
+    border-radius: 18px;
+    pointer-events: none;
+  }
+  .door-left { transform-origin: left center; }
+  .door-right { transform-origin: right center; }
+  .shell.is-opening .door-left { transform: rotateY(76deg); }
+  .shell.is-opening .door-right { transform: rotateY(-76deg); }
+
+  .gate-face {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 32px 40px;
+    text-align: center;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+  }
+  .shell.is-opening .gate-face {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  .kicker {
+    font-family: var(--sans);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--sage);
+    margin: 0 0 18px;
+  }
+  .names {
+    margin: 0;
+    line-height: 1;
+  }
+  .names span {
+    display: block;
+    font-family: var(--script);
+    font-weight: 400;
+  }
+  .names .groom,
+  .names .bride {
+    font-size: 64px;
+    color: var(--rose-deep);
+    line-height: 1.05;
+  }
+  .names .groom { margin-bottom: 4px; }
+  .names .bride { margin-top: 18px; }
+  .names .weds {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--gold);
+    margin: 10px 0 0;
+    line-height: 1;
+  }
+  .rule {
+    width: 72px;
+    height: 1px;
+    background: var(--gold);
+    margin: 18px auto;
+    position: relative;
+  }
+  .rule::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border: 1px solid var(--gold);
+    background: var(--ivory);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .gate-date {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .gate-place {
+    margin: 8px 0 0;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1;
+  }
+  .seal {
+    position: relative;
+    margin-top: 36px;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    border: 1px dashed var(--gold);
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(circle at 50% 42%, #fffaf2, #f0e0c4 72%, #e4cfA4);
+    box-shadow: 0 10px 24px rgba(120, 78, 32, 0.16);
+    pointer-events: none;
+    animation: sealGlow 2.6s ease-in-out infinite;
+  }
+  .seal::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid rgba(168, 132, 69, 0.5);
+    animation: sealRing 2.6s ease-out infinite;
+  }
+  @keyframes sealGlow {
+    0%, 100% { box-shadow: 0 10px 24px rgba(120, 78, 32, 0.16); }
+    50% { box-shadow: 0 16px 34px rgba(156, 61, 76, 0.22); }
+  }
+  @keyframes sealRing {
+    0% { transform: scale(0.94); opacity: 0.65; }
+    100% { transform: scale(1.22); opacity: 0; }
+  }
+  .petals {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .petals i {
+    position: absolute;
+    bottom: -16px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50% 0 50% 50%;
+    background: rgba(184, 122, 132, 0.55);
+    animation: floatUp linear infinite;
+  }
+  .petals i:nth-child(1) { left: 10%; animation-duration: 9s; animation-delay: 0s; }
+  .petals i:nth-child(2) { left: 28%; width: 6px; height: 6px; background: rgba(196, 164, 96, 0.7); animation-duration: 11s; animation-delay: 1.4s; }
+  .petals i:nth-child(3) { left: 48%; animation-duration: 8.5s; animation-delay: 2.6s; }
+  .petals i:nth-child(4) { left: 66%; width: 6px; height: 6px; background: rgba(196, 164, 96, 0.65); animation-duration: 10s; animation-delay: 0.8s; }
+  .petals i:nth-child(5) { left: 82%; animation-duration: 12s; animation-delay: 3.2s; }
+  .petals i:nth-child(6) { left: 18%; width: 5px; height: 5px; animation-duration: 13s; animation-delay: 4s; }
+  @keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    15% { opacity: 0.85; }
+    100% { transform: translateY(-108vh) rotate(200deg); opacity: 0; }
+  }
+  .kicker, .names .groom, .names .weds, .names .bride, .rule, .gate-date, .gate-place, .gate-hint {
+    animation: gateIn 0.9s ease both;
+  }
+  .kicker { animation-delay: 0.05s; }
+  .names .groom { animation-delay: 0.16s; }
+  .names .weds { animation-delay: 0.34s; }
+  .names .bride { animation-delay: 0.48s; }
+  .rule { animation-delay: 0.62s; }
+  .gate-date { animation-delay: 0.72s; }
+  .gate-place { animation-delay: 0.82s; }
+  .seal { animation: gateIn 0.9s ease 0.9s both, sealGlow 2.6s ease-in-out 1.4s infinite; }
+  .gate-hint { animation-delay: 1.05s; }
+  @keyframes gateIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+  .seal span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--rose-deep);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .gate-hint {
+    margin-top: 22px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .story { position: relative; }
+  .hero {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f3eadc;
+  }
+  .hero img, .poster img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  .scroll-hint {
+    margin: 0;
+    padding: 16px 20px 22px;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sage);
+    background: #f3eadc;
+  }
+  .scroll-hint i {
+    display: block;
+    width: 1px;
+    height: 28px;
+    margin: 8px auto 0;
+    background: linear-gradient(var(--gold), transparent);
+    transform-origin: top center;
+    animation: drip 1.6s ease-in-out infinite;
+  }
+  @keyframes drip {
+    0%, 100% { transform: scaleY(0.45); opacity: 0.35; }
+    50% { transform: scaleY(1); opacity: 1; }
+  }
+
+  section.block {
+    padding: 42px 26px 18px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0;
+    line-height: 1.2;
+  }
+  h2 {
+    font-family: var(--script);
+    font-size: 42px;
+    font-weight: 400;
+    margin: 2px 0 12px;
+    padding-top: 10px;
+    color: var(--rose-deep);
+    line-height: 1.35;
+  }
+  .lede {
+    margin: 4px auto 0;
+    max-width: 28ch;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .quote {
+    margin: 14px auto 0;
+    max-width: 28ch;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .hero { overflow: hidden; }
+  .shell.is-open .hero img {
+    animation: photoIn 1.15s ease both;
+  }
+  @keyframes photoIn {
+    from { opacity: 0; transform: scale(1.04); }
+    to { opacity: 1; transform: none; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+  .timeline li {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .reveal.is-in .timeline li { opacity: 1; transform: none; }
+  .reveal.is-in .timeline li:nth-child(1) { transition-delay: 0.05s; }
+  .reveal.is-in .timeline li:nth-child(2) { transition-delay: 0.14s; }
+  .reveal.is-in .timeline li:nth-child(3) { transition-delay: 0.23s; }
+  .reveal.is-in .timeline li:nth-child(4) { transition-delay: 0.32s; }
+  .reveal.is-in .timeline li:nth-child(5) { transition-delay: 0.41s; }
+  .venue {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-in .venue { opacity: 1; transform: none; }
+  .reveal.is-in .venue:nth-of-type(1) { transition-delay: 0.06s; }
+  .reveal.is-in .venue:nth-of-type(2) { transition-delay: 0.16s; }
+  .reveal.is-in .venue:nth-of-type(3) { transition-delay: 0.26s; }
+
+  .scratch-wrap {
+    position: relative;
+    width: min(232px, 68%);
+    margin: 12px auto 2px;
+    aspect-ratio: 1;
+    overflow: visible;
+    filter: drop-shadow(0 12px 14px rgba(111, 72, 28, 0.16));
+    animation: heartBeat 2.8s ease-in-out infinite;
+    transform-origin: center 62%;
+  }
+  .scratch-wrap.is-touched,
+  .scratch-wrap.is-clear {
+    animation: none;
+  }
+  @keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.045); }
+  }
+  .heart-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+  }
+  .scratch-date {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 58%;
+    z-index: 0;
+    margin: 0;
+    text-align: center;
+    pointer-events: none;
+  }
+  .scratch-date strong {
+    color: var(--rose-deep);
+    font-family: "Cormorant Garamond", Palatino, Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .spark {
+    position: absolute;
+    z-index: 3;
+    width: 8px;
+    height: 8px;
+    pointer-events: none;
+  }
+  .spark::before,
+  .spark::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #c9a15a;
+    transform: translate(-50%, -50%);
+  }
+  .spark::before { width: 8px; height: 1px; }
+  .spark::after { width: 1px; height: 8px; }
+  .s1 { left: 16%; top: 32%; animation: twinkle 2.4s ease-in-out infinite; }
+  .s2 { right: 14%; top: 40%; animation: twinkle 3s ease-in-out infinite 0.5s; }
+  .s3 { left: 64%; top: 20%; animation: twinkle 2.7s ease-in-out infinite 0.9s; }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(0.75); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+  .scratch-sub {
+    margin: 2px 0 0;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--sage);
+    line-height: 1.55;
+  }
+  #scratch {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    cursor: pointer;
+  }
+  .scratch-wrap.is-clear #scratch {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    border: 0;
+    background: var(--sage);
+    color: #f7f3ea;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .btn.gold { background: var(--rose-deep); }
+  .btn.ghost {
+    background: transparent;
+    color: var(--rose-deep);
+    border: 1px solid var(--line);
+  }
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .clock {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 22px auto 0;
+    max-width: 360px;
+  }
+  .unit {
+    background: #fff;
+    border: 1px solid var(--gold-soft);
+    border-radius: 14px;
+    padding: 12px 4px 10px;
+    text-align: center;
+  }
+  .unit b {
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--rose-deep);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "lnum" 1, "tnum" 1;
+  }
+  .unit b.tick {
+    animation: numIn 0.35s ease;
+  }
+  @keyframes numIn {
+    from { opacity: 0.25; transform: translateY(-5px); }
+    to { opacity: 1; transform: none; }
+  }
+  .unit small {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 22px auto 0;
+    padding: 0;
+    max-width: 360px;
+    text-align: left;
+  }
+  .timeline li {
+    position: relative;
+    padding: 0 0 18px 22px;
+    border-left: 1px solid var(--gold-soft);
+  }
+  .timeline li:last-child { border-left-color: transparent; }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--rose);
+    box-shadow: 0 0 0 4px #f6ebe3;
+  }
+  .timeline h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .timeline p {
+    margin: 2px 0 0;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .poster {
+    margin: 8px 18px 22px;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(168, 132, 69, 0.2);
+    box-shadow: 0 10px 28px rgba(80, 50, 20, 0.06);
+  }
+  .poster figcaption {
+    padding: 14px 16px 16px;
+    text-align: center;
+  }
+  .poster h3 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .poster p {
+    margin: 4px 0 12px;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .venues { padding-bottom: 10px; }
+  .venue {
+    margin: 12px auto;
+    max-width: 360px;
+    padding: 16px 16px 14px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid var(--gold-soft);
+    text-align: left;
+  }
+  .venue h3 { margin: 0 0 6px; font-size: 24px; font-weight: 600; line-height: 1.2; text-align: left; }
+  .venue p {
+    margin: 0 0 12px;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .wish textarea {
+    width: min(360px, 100%);
+    min-height: 96px;
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--gold-soft);
+    background: #fff;
+    resize: vertical;
+    font-family: var(--sans);
+    font-size: 14px;
+  }
+  .closing {
+    padding-bottom: 48px;
+  }
+  .closing .sign {
+    font-family: var(--script);
+    font-size: 40px;
+    line-height: 1.4;
+    color: var(--rose-deep);
+    margin: 16px 0 0;
+  }
+  .fine {
+    margin: 18px 0 0;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .door, .gate-face, .reveal, .seal, .seal::after, .petals i,
+    .scroll-hint i, .scratch-wrap, .unit b, .timeline li, .venue,
+    .kicker, .names span, .rule, .gate-date, .gate-place, .gate-hint,
+    .hero img {
+      transition: none !important;
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="shell is-sealed" id="shell">
+    <button class="gate" id="gate" type="button" aria-label="Tap to open the wedding card">
+      <div class="doors" aria-hidden="true">
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
+      </div>
+      <div class="petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="gate-face">
+        <p class="kicker">You are invited</p>
+        <p class="names">
+          <span class="groom">Rashi</span>
+          <span class="weds">weds</span>
+          <span class="bride">Jayesh</span>
+        </p>
+        <div class="rule"></div>
+        <p class="gate-date">21 November 2026</p>
+        <p class="gate-place">Udaipur</p>
+        <div class="seal"><span>Tap to<br>open</span></div>
+        <p class="gate-hint">A card for you</p>
+      </div>
+    </button>
+
+    <article class="story" id="story">
+      <header class="hero">
+        <img src="cards/cover.jpg" alt="Rashi weds Jayesh, 21 November 2026. Two hearts, one journey, a lifetime of love.">
+        <p class="scroll-hint">Scroll the card<i></i></p>
+      </header>
+
+      <section class="block reveal">
+        <p class="eyebrow">Together with their families</p>
+        <h2>We're getting married</h2>
+        <p class="lede">We are honoured to welcome you to the wedding celebrations of Rashi and Jayesh, as they begin their journey with your blessings.</p>
+        <p class="quote">“From this day forward, together always.”</p>
+      </section>
+
+      <section class="block reveal" id="scratch-section">
+        <p class="eyebrow">A small surprise</p>
+        <h2>Scratch to reveal</h2>
+        <div class="scratch-wrap" id="scratchWrap">
+          <svg class="heart-svg" viewBox="0 0 100 100" aria-hidden="true">
+            <defs>
+              <radialGradient id="heartFill" cx="50%" cy="38%" r="58%">
+                <stop offset="0%" stop-color="#fffaf4"/>
+                <stop offset="52%" stop-color="#f8e3d2"/>
+                <stop offset="100%" stop-color="#efc2b3"/>
+              </radialGradient>
+            </defs>
+            <path fill="url(#heartFill)" d="M50 46 C50 32 24 35 24 48 C24 61 46 70 50 80 C54 70 76 61 76 48 C76 35 50 32 50 46 Z"/>
+            <rect x="47.4" y="49.2" width="5.2" height="5.2" fill="#fff8ee" stroke="#b08a4a" stroke-width="0.55" transform="rotate(45 50 51.8)"/>
+          </svg>
+          <p class="scratch-date"><strong>21 Nov</strong></p>
+          <canvas id="scratch" aria-label="Scratch the heart to reveal the date"></canvas>
+          <span class="spark s1" aria-hidden="true"></span>
+          <span class="spark s2" aria-hidden="true"></span>
+          <span class="spark s3" aria-hidden="true"></span>
+        </div>
+        <p class="scratch-sub">Saturday · 2026<br>Udaipur</p>
+        <div class="btn-row">
+          <a class="btn" id="googleCal" href="#" target="_blank" rel="noopener">Add to calendar</a>
+        </div>
+      </section>
+
+      <section class="block reveal">
+        <p class="eyebrow">Until we celebrate</p>
+        <h2>Counting down</h2>
+        <div class="clock" aria-live="polite">
+          <div class="unit"><b id="dd">00</b><small>Days</small></div>
+          <div class="unit"><b id="hh">00</b><small>Hours</small></div>
+          <div class="unit"><b id="mm">00</b><small>Minutes</small></div>
+          <div class="unit"><b id="ss">00</b><small>Seconds</small></div>
+        </div>
+        <p class="quote">First celebration begins at 11:00&nbsp;AM.</p>
+      </section>
+
+      <section class="block reveal">
+        <p class="eyebrow">Saturday, 21 November 2026</p>
+        <h2>The day</h2>
+        <ol class="timeline">
+          <li>
+            <h3>Sagai &amp; Carnival</h3>
+            <p>11:00 AM · Mandap Vatika<br>Kumbha Nagar, Nokha, opposite Mahaviram Appartment, Udaipur 313001</p>
+          </li>
+          <li>
+            <h3>Mayra</h3>
+            <p>2:30 PM · Dé Glance Hotel<br>Wakal Mata Road, Gayariawas, Central Area, Udaipur 313002</p>
+          </li>
+          <li>
+            <h3>Reception</h3>
+            <p>6:00 PM · Mandap Vatika<br>Kumbha Nagar, Nokha, opposite Mahaviram Appartment, Udaipur 313001</p>
+          </li>
+          <li>
+            <h3>Barat Swagat</h3>
+            <p>7:00 PM · Mandap Vatika<br>Kumbha Nagar, Nokha, opposite Mahaviram Appartment, Udaipur 313001</p>
+          </li>
+          <li>
+            <h3>Vivah Sanskar</h3>
+            <p>11:30 PM</p>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <figure class="poster reveal">
+          <img src="cards/sagai.jpg" alt="Sagai and Carnival, 21 November 2026, 11:00 AM, at Mandap Vatika, Kumbha Nagar, Nokha, opposite Mahaviram Appartment, Udaipur, Rajasthan 313001.">
+          <figcaption>
+            <h3>Sagai &amp; Carnival</h3>
+            <p>21 November 2026 · 11:00 AM<br>Mandap Vatika, Kumbha Nagar, Nokha, Udaipur</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mandap+Vatika+Kumbha+Nagar+Nokha+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
+          </figcaption>
+        </figure>
+        <figure class="poster reveal">
+          <img src="cards/mayra.jpg" alt="Mayra, 21 November 2026, 2:30 PM, at Dé Glance Hotel, Wakal Mata Road, Gayariawas, Central Area, Udaipur, Rajasthan 313002.">
+          <figcaption>
+            <h3>Mayra</h3>
+            <p>21 November 2026 · 2:30 PM<br>Dé Glance Hotel, Wakal Mata Road, Udaipur</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+De+Glance+Wakal+Mata+Road+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
+          </figcaption>
+        </figure>
+        <figure class="poster reveal">
+          <img src="cards/reception.jpg" alt="Reception at 6:00 PM and Barat Swagat at 7:00 PM, 21 November 2026, at Mandap Vatika, Kumbha Nagar, Nokha, opposite Mahaviram Appartment, Udaipur.">
+          <figcaption>
+            <h3>Reception &amp; Barat Swagat</h3>
+            <p>21 November 2026 · Reception 6:00 PM · Barat Swagat 7:00 PM<br>Mandap Vatika, Kumbha Nagar, Nokha, Udaipur</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mandap+Vatika+Kumbha+Nagar+Nokha+Udaipur" target="_blank" rel="noopener">Open in Maps</a>
+          </figcaption>
+        </figure>
+        <figure class="poster reveal">
+          <img src="cards/vivah.jpg" alt="Vivah Sanskar, 21 November 2026, 11:30 PM. Seven steps, a lifetime of love, faith and togetherness.">
+          <figcaption>
+            <h3>Vivah Sanskar</h3>
+            <p>21 November 2026 · 11:30 PM<br>Seven steps, a lifetime of love, faith and togetherness.</p>
+          </figcaption>
+        </figure>
+        <figure class="poster reveal">
+          <img src="cards/family.jpg" alt="Family blessings for Rashi and Jayesh: maternals, sweet request, compliments, and a warm welcome.">
+          <figcaption>
+            <h3>With our families</h3>
+            <p>Maternals, sweet request, compliments and a warm welcome.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="block venues reveal">
+        <p class="eyebrow">Where to come</p>
+        <h2>Venues</h2>
+        <article class="venue">
+          <h3>Mandap Vatika</h3>
+          <p>Sagai &amp; Carnival, 11:00 AM<br>Reception, 6:00 PM<br>Barat Swagat, 7:00 PM<br>Kumbha Nagar, Nokha, opposite Mahaviram Appartment, Udaipur, Rajasthan 313001</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mandap+Vatika+Kumbha+Nagar+Nokha+Udaipur" target="_blank" rel="noopener">View on Google Maps</a>
+        </article>
+        <article class="venue">
+          <h3>Dé Glance Hotel</h3>
+          <p>Mayra, 2:30 PM<br>Wakal Mata Road, Gayariawas, Central Area, Udaipur, Rajasthan 313002</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+De+Glance+Wakal+Mata+Road+Udaipur" target="_blank" rel="noopener">View on Google Maps</a>
+        </article>
+      </section>
+
+      <section class="block wish closing reveal">
+        <p class="eyebrow">With love</p>
+        <h2>We can't wait to celebrate with you</h2>
+        <p class="sign">Rashi &amp; Jayesh</p>
+        <textarea id="wish" placeholder="Write your wishes for Rashi and Jayesh"></textarea>
+        <div class="btn-row">
+          <button class="btn gold" id="sendWish" type="button">Send wishes on WhatsApp</button>
+        </div>
+        <p class="fine">Saturday · 21 November 2026 · Udaipur</p>
+      </section>
+    </article>
+  </div>
+  <noscript>Tap-to-open needs JavaScript. Rashi weds Jayesh, Saturday 21 November 2026, Udaipur.</noscript>
+
+<script>
+(function () {
+  var shell = document.getElementById("shell");
+  var gate = document.getElementById("gate");
+  var story = document.getElementById("story");
+
+  var when = new Date("2026-11-21T11:00:00+05:30");
+  var scheduleText = [
+    "Rashi weds Jayesh",
+    "Saturday, 21 November 2026 · Udaipur",
+    "",
+    "Sagai & Carnival",
+    "11:00 AM · Mandap Vatika",
+    "Kumbha Nagar, Nokha, opposite Mahaviram Appartment, Udaipur 313001",
+    "",
+    "Mayra",
+    "2:30 PM · Dé Glance Hotel",
+    "Wakal Mata Road, Gayariawas, Udaipur 313002",
+    "",
+    "Reception",
+    "6:00 PM · Mandap Vatika, Udaipur",
+    "",
+    "Barat Swagat",
+    "7:00 PM · Mandap Vatika, Udaipur",
+    "",
+    "Vivah Sanskar",
+    "11:30 PM",
+    "",
+    "We would be honoured by your presence."
+  ].join("\n");
+
+  function openWhatsApp(text) {
+    var url = "https://wa.me/919079103765?text=" + encodeURIComponent(text);
+    window.open(url, "_blank", "noopener");
+  }
+
+  gate.addEventListener("click", function () {
+    if (shell.classList.contains("is-opening") || shell.classList.contains("is-open")) return;
+    shell.classList.add("is-opening");
+    window.setTimeout(function () {
+      shell.classList.add("is-open");
+      shell.classList.remove("is-sealed");
+      gate.hidden = true;
+      story.focus({ preventScroll: true });
+    }, 980);
+  });
+
+  var motionOK = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealNodes = document.querySelectorAll(".reveal");
+  if (!motionOK || !("IntersectionObserver" in window)) {
+    revealNodes.forEach(function (el) { el.classList.add("is-in"); });
+  } else {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        revealObserver.unobserve(entry.target);
+      });
+    }, { root: shell, threshold: 0.22, rootMargin: "0px 0px -8% 0px" });
+    revealNodes.forEach(function (el) { revealObserver.observe(el); });
+  }
+
+  var calUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + "&text=" + encodeURIComponent("Rashi weds Jayesh")
+    + "&dates=20261121T053000Z/20261121T180000Z"
+    + "&location=" + encodeURIComponent("Udaipur, Rajasthan")
+    + "&details=" + encodeURIComponent(scheduleText);
+  document.getElementById("googleCal").href = calUrl;
+
+  function tick() {
+    var diff = when.getTime() - Date.now();
+    if (diff < 0) diff = 0;
+    var total = Math.floor(diff / 1000);
+    var days = String(Math.floor(total / 86400)).padStart(2, "0");
+    var hours = String(Math.floor((total % 86400) / 3600)).padStart(2, "0");
+    var mins = String(Math.floor((total % 3600) / 60)).padStart(2, "0");
+    var secs = String(total % 60).padStart(2, "0");
+    setUnit("dd", days);
+    setUnit("hh", hours);
+    setUnit("mm", mins);
+    setUnit("ss", secs);
+  }
+  function setUnit(id, value) {
+    var el = document.getElementById(id);
+    if (el.textContent === value) return;
+    el.textContent = value;
+    el.classList.remove("tick");
+    void el.offsetWidth;
+    el.classList.add("tick");
+  }
+  tick();
+  window.setInterval(tick, 1000);
+
+  document.getElementById("sendWish").addEventListener("click", function () {
+    var note = document.getElementById("wish").value.trim();
+    if (!note) note = "Heartiest wishes to Rashi and Jayesh. So happy to celebrate with you on 21 November 2026.";
+    openWhatsApp(note + "\n\n— sent from the wedding card");
+  });
+
+  var canvas = document.getElementById("scratch");
+  var wrap = document.getElementById("scratchWrap");
+  var ctx = canvas.getContext("2d");
+  var scratching = false;
+  var revealed = false;
+  var moved = false;
+  var anchorX = 0;
+  var anchorY = 0;
+  var lastX = 0;
+  var lastY = 0;
+  var sizedW = 0;
+  var sizedH = 0;
+
+  function heartPath(w, h) {
+    ctx.beginPath();
+    ctx.moveTo(0.5 * w, 0.46 * h);
+    ctx.bezierCurveTo(0.5 * w, 0.32 * h, 0.24 * w, 0.35 * h, 0.24 * w, 0.48 * h);
+    ctx.bezierCurveTo(0.24 * w, 0.61 * h, 0.46 * w, 0.7 * h, 0.5 * w, 0.8 * h);
+    ctx.bezierCurveTo(0.54 * w, 0.7 * h, 0.76 * w, 0.61 * h, 0.76 * w, 0.48 * h);
+    ctx.bezierCurveTo(0.76 * w, 0.35 * h, 0.5 * w, 0.32 * h, 0.5 * w, 0.46 * h);
+    ctx.closePath();
+  }
+
+  function star(sx, sy, r) {
+    ctx.save();
+    ctx.translate(sx, sy);
+    ctx.strokeStyle = "rgba(255,250,236,0.92)";
+    ctx.lineWidth = Math.max(1.2, r * 0.22);
+    ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(-r, 0);
+    ctx.lineTo(r, 0);
+    ctx.moveTo(0, -r);
+    ctx.lineTo(0, r);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function paintCover() {
+    var w = canvas.width;
+    var h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+    ctx.save();
+    heartPath(w, h);
+    ctx.clip();
+    var grad = ctx.createLinearGradient(w * 0.12, h * 0.28, w * 0.88, h * 0.86);
+    grad.addColorStop(0, "#f3e2b0");
+    grad.addColorStop(0.28, "#d7b56a");
+    grad.addColorStop(0.55, "#b9964e");
+    grad.addColorStop(0.78, "#8d986c");
+    grad.addColorStop(1, "#6d7a56");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, w, h);
+    var glow = ctx.createRadialGradient(w * 0.4, h * 0.4, w * 0.02, w * 0.5, h * 0.55, w * 0.5);
+    glow.addColorStop(0, "rgba(255,248,226,0.62)");
+    glow.addColorStop(1, "rgba(255,248,226,0)");
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, w, h);
+    var i;
+    for (i = 0; i < 70; i++) {
+      ctx.fillStyle = i % 4 === 0 ? "rgba(255,250,232,0.95)" : "rgba(255,255,255,0.28)";
+      ctx.beginPath();
+      ctx.arc(Math.random() * w, Math.random() * h, Math.random() * 1.5 + 0.3, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    star(w * 0.3, h * 0.46, w * 0.02);
+    star(w * 0.7, h * 0.5, w * 0.015);
+    star(w * 0.48, h * 0.38, w * 0.012);
+    star(w * 0.58, h * 0.74, w * 0.016);
+    ctx.fillStyle = "rgba(255,250,242,0.96)";
+    ctx.font = "600 " + Math.round(w * 0.05) + "px Outfit, sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText("SCRATCH", w / 2, h * 0.6);
+    ctx.restore();
+    ctx.save();
+    heartPath(w, h);
+    ctx.strokeStyle = "rgba(255,244,214,0.7)";
+    ctx.lineWidth = Math.max(2, w * 0.012);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function finishReveal() {
+    if (revealed) return;
+    revealed = true;
+    scratching = false;
+    wrap.classList.add("is-clear");
+  }
+
+  function sizeCanvas() {
+    var rect = wrap.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    var ratio = window.devicePixelRatio || 1;
+    var w = Math.max(1, Math.floor(rect.width * ratio));
+    var h = Math.max(1, Math.floor(rect.height * ratio));
+    if (revealed) {
+      if (canvas.width !== w || canvas.height !== h) {
+        canvas.width = w;
+        canvas.height = h;
+      }
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      wrap.classList.add("is-clear");
+      return;
+    }
+    if (sizedW && Math.abs(w - sizedW) / sizedW < 0.04 && Math.abs(h - sizedH) / sizedH < 0.08) return;
+    sizedW = w;
+    sizedH = h;
+    canvas.width = w;
+    canvas.height = h;
+    paintCover();
+  }
+
+  function scratchAt(clientX, clientY) {
+    var rect = canvas.getBoundingClientRect();
+    var x = (clientX - rect.left) * (canvas.width / rect.width);
+    var y = (clientY - rect.top) * (canvas.height / rect.height);
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.beginPath();
+    ctx.arc(x, y, canvas.width * 0.075, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalCompositeOperation = "source-over";
+  }
+
+  canvas.addEventListener("pointerdown", function (event) {
+    if (revealed) return;
+    scratching = true;
+    moved = false;
+    anchorX = lastX = event.clientX;
+    anchorY = lastY = event.clientY;
+    if (canvas.setPointerCapture) canvas.setPointerCapture(event.pointerId);
+    wrap.classList.add("is-touched");
+    scratchAt(event.clientX, event.clientY);
+  });
+  canvas.addEventListener("pointermove", function (event) {
+    if (!scratching || revealed) return;
+    var dx = event.clientX - anchorX;
+    var dy = event.clientY - anchorY;
+    if (dx * dx + dy * dy > 360) moved = true;
+    var dist = Math.hypot(event.clientX - lastX, event.clientY - lastY);
+    var steps = Math.max(1, Math.round(dist / 6));
+    var i;
+    for (i = 1; i <= steps; i++) {
+      scratchAt(
+        lastX + (event.clientX - lastX) * (i / steps),
+        lastY + (event.clientY - lastY) * (i / steps)
+      );
+    }
+    lastX = event.clientX;
+    lastY = event.clientY;
+    if (moved) finishReveal();
+  });
+  function pointerUp() {
+    if (scratching && moved) finishReveal();
+    scratching = false;
+  }
+  window.addEventListener("pointerup", pointerUp);
+  window.addEventListener("pointercancel", pointerUp);
+
+  sizeCanvas();
+  window.addEventListener("resize", sizeCanvas);
+})();
+</script>
+</body>
+</html>
